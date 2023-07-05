@@ -3,28 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intro to programming with c</title>
+    <title>Intro to programming with C</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <script src="https://kit.fontawesome.com/468248347f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+          <a class="navbar-brand" href="../../index.html">Cs Fundamentals</a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a class="nav-link text-danger active" href="#">C Programming</a>
               </li>
@@ -39,11 +40,12 @@
     </header>
 
     <!-- main body here -->
-    <main>
+    <main class="mt-5 pt-3">
+      
 
-      <section class="mx-2">
-        <div class="d-flex align-items-start row">
-          <div class="nav flex-column nav-pills col-lg-3 col-sm-12" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <section class="">
+        <div class="d-flex align-items-start row rel">
+          <div class="nav flex-column nav-pills col-lg-3 col-sm-12 side" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">1. C programming basic</button>
             <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">2. More C practice</button>
            <!--  <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
@@ -52,6 +54,17 @@
           <div class="tab-content col-lg-9 col-sm-12" id="v-pills-tabContent">
             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
               <div class="row border border-white">
+                <section class="topics col-lg-12 col-sm-12 mb-2">
+                  <h2>Today's topics:</h2>
+                  <ol>
+                    <li>Input Output</li>
+                    <li>Data Types</li>
+                    <li>If Else</li>
+                    <li>If Else Ladder</li>
+                    <li>Nested If Else</li>
+                  </ol>
+                </section>
+                <hr>
                 <div class="col-lg-5 col-sm-12">
                   <h6>Problem 1: </h6>
                   <p>You need to print the lines given below in the same format as it is -
@@ -65,7 +78,7 @@
                   <h6>Solution: </h6>
                   <code>
                     <pre class="text-dark">
-  #include<stdio.h>
+  #include< stdio.h>
 
     int main()
     {
@@ -94,6 +107,15 @@ subtraction, multiplication and division in the given format below.
   5 - 2 = 3
   5 * 2 = 10
   5 / 2 = 2.50
+  Sample Input Sample Output
+  5 2           5 + 2 = 7
+                5 - 2 = 3
+                5 * 2 = 10
+                5 / 2 = 2.50
+  10 3          10 + 3 = 13
+                10 - 3 = 7
+                10 * 3 = 30
+                10 / 3 = 3.33
 </pre>
 
                   </p>
@@ -102,7 +124,7 @@ subtraction, multiplication and division in the given format below.
                   <h6>Solution: </h6>
                   <code>
                     <pre class="text-dark">
-  #include<stdio.h>
+  #include< stdio.h>
 
     int main()
     {
@@ -120,10 +142,484 @@ subtraction, multiplication and division in the given format below.
                   </code>
                 </div>
               </div>
+              <hr>
+              <div class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h6>Probelm: 3</h6>
+                  <p>
+                    You need to take one non-negative integer (0 or greater than 0) value as
+input and tell if it is even or odd.
+See the sample input and output for more clarification.
+<pre>
+  Sample Input Sample Output
+  10            even
+  3             odd
+</pre>
+
+                  </p>
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Solution: </h6>
+                  <code>
+                    <pre class="text-dark">
+  #include< stdio.h>
+
+  int main()
+  {
+      int a;
+      scanf("%d",&a);
+      if(a>=0)
+      {
+          if(a%2==0)
+          {
+              printf("even");
+          }
+          else
+          {
+              {
+              printf("odd");
+          }
+          }
+      }
+      else
+      {
+          printf("Please enter a non-negative number!\nThank you.");
+      }
+      
+      return 0;
+  }
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <hr>
+              <div class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h6>Probelm: 4</h6>
+                  <p>
+                    You need to take one integer value as input and tell if the value is
+positive or negative or zero.
+See the sample input and output for more clarification.
+<pre>
+  Sample Input Sample Output
+  10            positive
+  -50           negative
+  0             zero
+</pre>
+
+                  </p>
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Solution: </h6>
+                  <code>
+                    <pre class="text-dark">
+  #include< stdio.h>
+
+  int main()
+  {
+      int a;
+      scanf("%d",&a);
+      if(a>0)
+      {
+          printf("positive");
+      }
+      else if(a<0)
+      {
+          printf("negative");
+      }
+      else
+      {
+          printf("zero");
+      }
+      
+      return 0;
+  }
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <hr>
+              <div class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h6>Probelm: 5</h6>
+                  <p>
+                    Suppose your friend has told you that she will buy a Gucci Bag if she
+has 10 thousand taka or more. Otherwise if she has 5 thousand taka or
+more, she will buy a Levis Bag. Otherwise she will buy Something from
+New Market. She also told you that, if she could buy the Gucci bag and
+she has more than 20 thousand taka she will also buy a Gucci Belt.
+Now, if you know the amount of money she has, can you tell which
+item/items she will buy?
+See the sample input and output for more clarification.
+<pre>
+  Input   Output
+  20000   Gucci Bag
+  6500    Levis Bag
+  200     Something
+  25400   Gucci Bag
+          Gucci Belt
+</pre>
+
+                  </p>
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Solution: </h6>
+                  <code>
+                    <pre class="text-dark">
+  #include< stdio.h>
+
+  int main()
+  {
+      int a;
+      scanf("%d",&a);
+      if(a>0)
+      {
+          printf("positive");
+      }
+      else if(a<0)
+      {
+          printf("negative");
+      }
+      else
+      {
+          printf("zero");
+      }
+      
+      return 0;
+  }
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <h3>Github link <a href="https://github.com/MostafizurSawon/Introduction-to-Programming-Language-Problem-Solving-Part-I/tree/main/1-week/2-5-practice-day" target="_blank">here</a></h3>
+
             </div>
+
+
+
+            <!-- 2-more-practice-day -->
+
+            
             <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
-              <p>Click <a href="https://www.hackerrank.com/contests/batch-03-a-c-programming-a-module-3-5-practice/challenges">here</a> to go the practice contest.</p>
+              <p>Click <a href="https://www.hackerrank.com/contests/batch-03-a-c-programming-a-module-3-5-practice/challenges" target="_blank">here</a> to go the practice contest.</p>
+              <hr>
+              <div class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h6>Problem: 1</h6>
+                  <p>
+<pre>
+  Problem Statement
+
+  I know that you're loving practice days! So this task is for you. You need to print "I Love Practice" without the quotation marks. I know that you can do it!
+  
+  Input Format
+  
+  There is no input in this problem
+  Output Format
+  
+  Output "I Love Practice"
+
+  Sample Output 0
+  
+  I Love Practice
+</pre>
+
+                  </p>
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Solution: </h6>
+                  <code>
+                    <pre class="text-dark">
+  #include< stdio.h>
+
+  int main()
+  {
+      printf("I Love Practice");
+
+      return 0;
+  }
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <hr>
+              <div class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h6>Problem: 2</h6>
+                  <p>
+<pre>
+  Problem Statement
+
+  Take two integers A and B as input and output their summation.
+  
+  Input Format
+  
+  You will be given A and B separated by a space.
+  Constraints
+  
+  -10^9 <= A,B <= 10^9
+  Output Format
+  
+  Output their summation
+  Sample Input 0
+  
+  2 3
+  Sample Output 0
+  
+  5
+  Sample Input 1
+  
+  -10 5
+  Sample Output 1
+  
+  -5
+</pre>
+
+                  </p>
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Solution: </h6>
+                  <code>
+                    <pre class="text-dark">
+  #include< stdio.h>
+
+  int main()
+  {
+      int a,b;
+      scanf("%d %d",&a,&b);
+      int ans;
+      ans = a+b;
+      printf("%d", ans);
+  
+      return 0;
+  }
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <hr>
+              <div class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h6>Problem: 3</h6>
+                  <p>
+<pre>
+  Problem Statement
+
+  I know and you also know that you love practice
+  day so much. So this task is for you. You will
+  be given a positive integer N, you need to print
+  "I Love Practice" N times.
+  
+  Here positive integer means those integers that are greater than 0.
+  
+  Input Format
+  
+  You will be given a positive integer N.
+  Constraints
+  
+  1 <= N <= 1000
+  Output Format
+  
+  Output "I Love Practice" N times. Don't forget to put a new line after every line.
+  Sample Input 0
+  
+  5
+  Sample Output 0
+  
+  I Love Practice
+  I Love Practice
+  I Love Practice
+  I Love Practice
+  I Love Practice
+  Sample Input 1
+  
+  2
+  Sample Output 1
+  
+  I Love Practice
+  I Love Practice
+</pre>
+
+                  </p>
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Solution: </h6>
+                  <code>
+                    <pre class="text-dark">
+  #include< stdio.h>
+
+  int main()
+  {
+      int n;
+      scanf("%d", &n);
+      for (int i = 0; i <n; i++)
+      {
+          printf("I Love Practice\n");
+      }
+  
+      return 0;
+  }
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <hr>
+              <div class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h6>Problem: 4</h6>
+                  <p>
+<pre>
+  Problem Statement
+
+  You've learned about variables, right?
+  Now its time to practice them. You
+  need to take an integer A, a very big
+  integer B, a floating value C and a 
+  character D as input and output them serially.
+  
+  Input Format
+  
+  First line will contain A
+  Second line will contain B
+  Third line will contain C
+  Fourth line will contain D
+  Constraints
+  
+  -10^9 <= A <= 10^9
+  -10^18 <= B <= 10^18
+  -10^9 <= C <= 10^9
+  Output Format
+  
+  Output them serially and put a new line after
+   each value. Output the floating value 2 points after decimal.
+  Sample Input 0
+  
+  100
+  1234567891234567
+  23.5675
+  A
+  Sample Output 0
+  
+  100
+  1234567891234567
+  23.57
+  A
+</pre>
+
+                  </p>
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Solution: </h6>
+                  <code>
+                    <pre class="text-dark">
+  #include< stdio.h>
+
+  int main()
+  {
+      int n;
+      long long b;
+      float c;
+      char d;
+      scanf("%d %lld %f %c", &n, &b, &c, &d);
+      
+      printf("%d\n", n);
+      printf("%lld\n", b);
+      printf("%.2f\n", c);
+      printf("%c\n", d);
+      
+  
+      return 0;
+  }
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <hr>
+              <div class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h6>Problem: 5</h6>
+                  <p>
+<pre>
+  Problem Statement
+
+  You will be given a positive integer N, you
+  need to print from 1 to N and besides the
+  value, print Yes or No. Print Yes if the
+  value is divisible by 5 and print No otherwise.
+  
+  Input Format
+  
+  Input will contain a positive integer N.
+  Constraints
+  
+  1 <= N <= 1000
+  Output Format
+  
+  Output as mentioned in the question. See
+  the sample input output for more clarifications.
+   Put a new line after every line.
+  Sample Input 0
+  
+  10
+  Sample Output 0
+  
+  1 No
+  2 No
+  3 No
+  4 No
+  5 Yes
+  6 No
+  7 No
+  8 No
+  9 No
+  10 Yes
+
+
+  Sample Input 1
+  5
+
+  Sample Output 1
+  1 No
+  2 No
+  3 No
+  4 No
+  5 Yes
+</pre>
+
+                  </p>
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Solution: </h6>
+                  <code>
+                    <pre class="text-dark">
+  #include< stdio.h>
+
+  int main()
+  {
+      int n;
+      scanf("%d", &n);
+      for (int i = 1; i <= n; i++)
+      {
+          if(i%5==0)
+          {
+              printf("%d Yes\n", i);
+          }
+          else
+          {
+              printf("%d No\n",i);
+          }
+      }
+      
+  
+      return 0;
+  }
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <h3>Github link <a href="https://github.com/MostafizurSawon/Introduction-to-Programming-Language-Problem-Solving-Part-I/tree/main/1-week/3-5-practice-day-2 target="_blank">here</a></h3>
             </div>
+
             <!-- <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">...</div>
             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">...</div> -->
           </div>
