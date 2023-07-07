@@ -62,9 +62,37 @@
         </div>
       </nav>
       <div class="mt-5 pt-3 banner-text">
-        <h1 class="text-center py-2 text-dark">
+        <!-- <h1 class="text-center py-2 text-dark">
           Welcome to my Computer science fundamentals website
-        </h1>
+        </h1> -->
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <img src="images/banner.png" alt="" class="img-fluid" />
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <!-- <div class="alert h1 alert-primary text-center" role="alert">
+                
+              </div> -->
+              <h1>
+                Build Your <br />
+                Foundation as a<br />
+                <span class="text-success">Programmer</span>
+              </h1>
+              <h4>
+                Learn and Master Basic Programming, Data Structures, Algorithm,
+                OOP, Database and solve 500+ coding problems to become an
+                exceptionally well world-class Programmer.
+              </h4>
+
+              <button type="button" class="mt-2 btn btn-outline-primary">
+                Start Here
+              </button>
+            </div>
+          </div>
+        </div>
+
         <!-- <div
           class="h2 text-center py-2 my-4 text-danger border-bottom border-danger"
         >
@@ -79,7 +107,7 @@
         </svg> -->
       </div>
 
-      <section class="banner container-lg container-sm">
+      <section class="banner container-fluid">
         <div id="carouselExampleCaptions" class="carousel slide">
           <div class="carousel-indicators">
             <button
@@ -164,8 +192,104 @@
     <!-- header ends here -->
 
     <!-- main body here -->
-    <main>
-      <section class="mx-2 main-botto"></section>
+    <main class="main-bg">
+      
+      <section class="container-fluid my-3">
+        <div class="alert h1 alert-primary text-center" role="alert">
+                Full Study Plan
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-5">
+            <nav
+              id="navbar-example3"
+              class="h-100 flex-column align-items-stretch pe-4 border-end"
+            >
+              <nav class="nav nav-pills flex-column">
+                <a class="nav-link" href="#item-1">Semester: 1</a>
+                <nav class="nav nav-pills flex-column">
+                  <a class="nav-link ms-3 my-1" href="#item-1-1"
+                    >1. Introduction to Programming Language & Problem Solving
+                    Part-I</a
+                  >
+                  <a class="nav-link ms-3 my-1" href="#item-1-2"
+                    >2. Introduction to C++ for DSA</a
+                  >
+                  <a class="nav-link ms-3 my-1" href="#item-1-3"
+                    >3. Basic Data Structure</a
+                  >
+                </nav>
+                <!-- <a class="nav-link" href="#item-2">Item 2</a>
+                <a class="nav-link" href="#item-3">Item 3</a>
+                <nav class="nav nav-pills flex-column">
+                  <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+                  <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+                </nav>
+              </nav> -->
+            </nav>
+          </div>
+
+          <div class="col-lg-8 col-sm-7">
+            <div
+              data-bs-spy="scroll"
+              data-bs-target="#navbar-example3"
+              data-bs-smooth-scroll="true"
+              class="scrollspy-example-2"
+              tabindex="0"
+            >
+              <div id="item-1">
+                <h4 class="text-primary">CS Fundamentals || Semester 1</h4>
+              </div>
+              <div id="item-1-1">
+                <h5>
+                  Introduction to Programming Language & Problem Solving Part-I
+                </h5>
+                <p>
+                  In the modern high level languages, the machine level details
+                  are hidden from the user, so in order to work with CPU cache,
+                  memory, network adapters, learning C programming is a must.
+                </p>
+              </div>
+              <div id="item-1-2">
+                <h5>Introduction to C++ for DSA</h5>
+                <p>
+                  Key concepts of C++ DSA include Arrays, Linked Lists, Stacks,
+                  Queues, Trees, and Graphs. Common Algorithms in C++ DSA
+                  include Sorting, Searching, Graph, and Dynamic Programming
+                  Algorithms. C++ DSA has various applications in real-world
+                  problems, such as Operating Systems, Gaming, Finance, and
+                  Healthcare.
+                </p>
+              </div>
+              <div id="item-1-3">
+                <h5>Basic Data Structures</h5>
+                <p>
+                  What are basic data structures? Data structure is a method to
+                  store and organize data so it can be easily used to perform
+                  operations to get desired results. Arrays, linked lists,
+                  stacks, queues, hash tables, trees, heaps, and graphs are the
+                  basic data structures.
+                </p>
+              </div>
+              <!-- <div id="item-2">
+                <h4>Item 2</h4>
+                <p>...</p>
+              </div>
+              <div id="item-3">
+                <h4>Item 3</h4>
+                <p>...</p>
+              </div>
+              <div id="item-3-1">
+                <h5>Item 3-1</h5>
+                <p>...</p>
+              </div>
+              <div id="item-3-2">
+                <h5>Item 3-2</h5>
+                <p>...</p>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#0099ff"
@@ -177,8 +301,8 @@
     <!-- main body ends here -->
 
     <!-- footer here -->
-    <footer class="my-5 main-bottom">
-      <section class="container-lg container-sm">
+    <footer class="my-5 main-botto">
+      <section class="container-fluid">
         <button type="button" class="btn btn-outline-danger" id="liveToastBtn">
           Visit my web portfolio
         </button>
@@ -237,8 +361,13 @@
             Fancy background image
           </button>
         </a>
-        <a href="https://www.facebook.com/s4sawon" target="_blank">
+        <a href="https://neal.fun/deep-sea/" target="_blank">
           <button type="button" class="btn btn btn-outline-info">
+            Explore deep sea
+          </button>
+        </a>
+        <a href="https://www.facebook.com/s4sawon" target="_blank">
+          <button type="button" class="btn btn btn-outline-primary">
             <svg
               class="pb-1"
               xmlns="http://www.w3.org/2000/svg"

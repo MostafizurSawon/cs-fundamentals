@@ -5,13 +5,27 @@ a {
 .banner-text {
   background-image: url(images/main-top.svg);
   width: 100%;
-  height: 150px;
+  height: 520px;
   background-repeat: repeat-x;
+}
+
+.banner-text h1 {
+  font-size: 4rem;
+}
+
+.banner-text h4 {
+  line-height: 1.8;
+}
+
+.main-bg {
+  background-image: url(images/min.png);
+  background-size: cover;
+  /* background-repeat: no-repeat; */
 }
 
 .main-bottom {
   background-image: url(images/main-bottom.svg);
   width: 100%;
-  height: 150px;
+  /* height: 150px; */
   background-repeat: repeat-x;
 }
