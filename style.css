@@ -5,8 +5,25 @@ a {
 .banner-text {
   background-image: url(images/main-top.svg);
   width: 100%;
-  height: 520px;
-  background-repeat: repeat-x;
+  height: auto;
+  background-size: cover;
+  /* background-repeat: repeat-x; */
+  margin-bottom: 1rem;
+}
+
+.span-text {
+  background: -webkit-linear-gradient(#65f140, green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.span-text:hover {
+  background: -webkit-linear-gradient(green, #65f140);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: cell;
+  margin-left: 10px;
+  transition: 1s;
 }
 
 .banner-text h1 {
