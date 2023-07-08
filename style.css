@@ -54,3 +54,21 @@ a {
   /* height: 150px; */
   background-repeat: repeat-x;
 }
+
+.topics {
+  width: 80%;
+  border: 1px solid green;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  color: green;
+}
+
+.topics:hover {
+  color: white;
+  background-color: #4fc3f7;
+  cursor: cell;
+  margin-left: 0.2rem;
+  transition: 1s;
+  cursor: pointer;
+  border: 0;
+}
