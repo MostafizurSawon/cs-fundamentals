@@ -86,7 +86,7 @@
     </header>
 
     <!-- main body here -->
-    <main class="mt-5 pt-3 container-fluid">
+    <main class="mt-5 pt-3 container-fluid main-bg-2">
 
       <section class="intro">
         <nav aria-label="breadcrumb">
@@ -99,7 +99,8 @@
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">
-              Semester 1: Introduction to programming with C
+              Semester 1: Basic Data Structure with C++
+
             </li>
           </ol>
         </nav>
@@ -107,7 +108,7 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
-            <li class="breadcrumb-item"><a href="../../c/1-start-with-c.html">Semester 1: Basic Data Structure with C++</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Semester 1: Basic Data Structure with C++</a></li>
             <li class="breadcrumb-item active" aria-current="page">Week 4: Stack & Queue
             </li>
           </ol>
@@ -120,8 +121,8 @@
       <section class="container-fluid">
         <div class="d-flex align-items-start row rel">
           <div class="nav flex-column nav-pills col-lg-3 col-sm-12 side" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">13. Stack implementation and STL</button>
-            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">2. More C practice</button>
+            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">1. Stack implementation and STL</button>
+            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">2. Queue implementation and STL</button>
            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-assignment" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">3. Assignment: 1</button>
           <!-- <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button> -->
           </div>
@@ -129,6 +130,12 @@
             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
               <div class="row border border-white">
                 <section class="topics col-lg-12 col-sm-12 mb-2">
+                  <div class="alert alert-light mt-3 p-4 h1" role="alert">
+                    1. Stack implementation and STL
+                  </div>
+                  <p>
+                    Stack is a fundamental data structure which is used to store elements in a linear fashion. Stack follows LIFO (last in, first out) order or approach in which the operations are performed. This means that the element which was added last to the stack will be the first element to be removed from the stack
+                  </p>
                   <h2>Today's topics:</h2>
                   <ol>
                     <li>Stack using array</li>
@@ -140,8 +147,14 @@
                 <hr>
                 <div class="col-lg-5 col-sm-12">
                   <h6>Problem 1: </h6>
-                  <p>Stack implementation using array</p>
-                    <img class="w-100" src="media/1/problem-1.png" alt="">
+                  <p>Stack implementation using array.</p>
+                  <h4>C++ Program to Implement Stack using array.</h4>
+                    <ol>
+                      <li>Push - This adds a data value to the top of the stack.</li>
+                      <li>Pop - This removes the data value on top of the stack.</li>
+                      <li>Peek - This returns the top data value of the stack.</li>
+                    </ol>
+                  <img src="https://media.geeksforgeeks.org/wp-content/uploads/growable-stack.png" alt="" class="w-100">
                 </div>
                 <div class="col-lg-7 col-sm-12">
                   <h6>Solution: </h6>
@@ -211,6 +224,7 @@
 
 
                   </p>
+                  <p>Assign top and start as the new node. Otherwise, take a new node, add data to it and assign the “previous” pointer of the new node to the “top” node earlier and next as “null”. Further, update the “top” pointer to hold the value of the new node as that will be the top element of the stack now.</p>
                 </div>
                 <div class="col-lg-7 col-sm-12">
                   <h6>Solution: </h6>
@@ -391,6 +405,10 @@
                     STL stack
 
                   </p>
+                  <p>
+                    Stacks are a type of container adaptors with LIFO(Last In First Out) type of working, where a new element is added at one end (top) and an element is removed from that end only.
+                  </p>
+                  <img src="https://iq.opengenus.org/content/images/2019/05/stack_push_operation-1.jpg" alt="" class="w-100 rounded-2">
                 </div>
                 <div class="col-lg-7 col-sm-12">
                   <h6>Solution: </h6>
@@ -437,47 +455,125 @@
 
 
 
-            <!-- 2-more-practice-day -->
+            <!-- 2. Queue implementation and STL starts -->
 
             
             <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
-              <p>Click <a href="https://www.hackerrank.com/contests/batch-03-a-c-programming-a-module-3-5-practice/challenges" target="_blank">here</a> to go the practice contest.</p>
+              <div class="alert alert-light mt-3 p-4 h1" role="alert">
+                2. Queue implementation and STL
+              </div>
+              <p>A queue is an abstract data structure that contains a collection of elements. Queue implements the FIFO mechanism i.e. the element that is inserted first is also deleted first. In other words, the least recently added element is removed first in a queue.</p>
+              <h2>Today's topics:</h2>
+                  <ol>
+                    <li>Queue using Singly linked list</li>
+                    <li>Queue using Doubly linked list</li>
+                    <li>Queue using Doubly list</li>
+                    <li>Queue using Doubly STL</li>
+                    <li>Queue using Stack - Leetcode</li>
+                    <li>Stack using Queue - Leetcode</li>
+                    
+                  </ol>
               <hr>
               <div class="row my-4">
                 <div class="col-lg-5 col-sm-12">
-                  <h6>Problem: 1</h6>
+                  <h6>Topic 1: Queue using Singly linked list</h6>
                   <p>
-<pre>
-  Problem Statement
-
-  I know that you're loving practice days! So this task is for you. You need to print "I Love Practice" without the quotation marks. I know that you can do it!
-  
-  Input Format
-  
-  There is no input in this problem
-  Output Format
-  
-  Output "I Love Practice"
-
-  Sample Output 0
-  
-  I Love Practice
-</pre>
-
+                    A queue is a linear data structure that follows the First in, First out principle(FIFO). Queue supports operations like enqueue and dequeue. It can be implemented using an array and linked list.
                   </p>
+                  <img src="https://simplesnippets.tech/wp-content/uploads/2020/05/queue-using-singly-linked-list-featured-image.jpg" alt="" class="w-100 rounded">
                 </div>
                 <div class="col-lg-7 col-sm-12">
                   <h6>Solution: </h6>
                   <code>
                     <pre class="text-dark">
-  #include< stdio.h>
-
-  int main()
-  {
-      printf("I Love Practice");
-
-      return 0;
-  }
+        #include < bits/stdc++.h>
+        using namespace std;
+        
+        class Node
+        {
+        public:
+          int val;
+          Node *next;
+          Node(int val)
+          {
+            this->val = val;
+            this->next = NULL;
+          }
+        };
+        
+        class myQueue
+        {
+        public:
+          Node *head = NULL;
+          Node *tail = NULL;
+          int sz = 0;
+        
+          void push(int val)
+          {
+            sz++;
+            Node *newNode = new Node(val);
+            if (head == NULL)
+            {
+              head = newNode;
+              tail = newNode;
+              return;
+            }
+            tail->next = newNode;
+            tail = tail->next;
+          }
+        
+          void pop()
+          {
+            sz--;
+            Node *deleteNode = head;
+            head = head->next;
+            delete deleteNode;
+        
+            if (head == NULL)
+            {
+              tail = NULL;
+            }
+          }
+        
+          int front()
+          {
+            return head->val;
+          }
+        
+          int size()
+          {
+            return sz;
+          }
+        
+          bool empty()
+          {
+            if (sz == 0)
+              return true;
+            else
+              return false;
+          }
+        };
+        
+        int main()
+        {
+          myQueue q;
+          int n;
+          cin >> n;
+          while (n--)
+          {
+            int x;
+            cin >> x;
+            q.push(x);
+          }
+        
+          while (!q.empty())
+          {
+            cout << q.front() << endl;
+            q.pop();
+          }
+        
+          return 0;
+        }
                     </pre>
                   </code>
                 </div>
@@ -485,283 +581,391 @@
               <hr />
               <div class="row my-4">
                 <div class="col-lg-5 col-sm-12">
-                  <h6>Problem: 2</h6>
+                  <h6>Topic 2: Queue using Doubly linked list</h6>
                   <p>
-<pre>
-  Problem Statement
-
-  Take two integers A and B as input and output their summation.
-  
-  Input Format
-  
-  You will be given A and B separated by a space.
-  Constraints
-  
-  -10^9 <= A,B <= 10^9
-  Output Format
-  
-  Output their summation
-  Sample Input 0
-  
-  2 3
-  Sample Output 0
-  
-  5
-  Sample Input 1
-  
-  -10 5
-  Sample Output 1
-  
-  -5
-</pre>
-
+                    Using a doubly linked list for implementing a queue provides several advantages. It allows for efficient insertion and removal of elements at both ends of the list, making enqueue and dequeue operations constant time.
                   </p>
+                  <img src="https://agostini.tech/wp-content/uploads/2018/08/LinkedListQueue-DublyLinkedList.png" alt="" class="w-100 rounded-2">
                 </div>
                 <div class="col-lg-7 col-sm-12">
-                  <h6>Solution: </h6>
+                  <h6>Code: </h6>
                   <code>
                     <pre class="text-dark">
-  #include< stdio.h>
-
-  int main()
-  {
-      int a,b;
-      scanf("%d %d",&a,&b);
-      int ans;
-      ans = a+b;
-      printf("%d", ans);
-  
-      return 0;
-  }
-                    </pre>
-                  </code>
-                </div>
-              </div>
-              <hr>
-              <div class="row my-4">
-                <div class="col-lg-5 col-sm-12">
-                  <h6>Problem: 3</h6>
-                  <p>
-<pre>
-  Problem Statement
-
-  I know and you also know that you love practice
-  day so much. So this task is for you. You will
-  be given a positive integer N, you need to print
-  "I Love Practice" N times.
-  
-  Here positive integer means those integers that are greater than 0.
-  
-  Input Format
-  
-  You will be given a positive integer N.
-  Constraints
-  
-  1 <= N <= 1000
-  Output Format
-  
-  Output "I Love Practice" N times. Don't forget to put a new line after every line.
-  Sample Input 0
-  
-  5
-  Sample Output 0
-  
-  I Love Practice
-  I Love Practice
-  I Love Practice
-  I Love Practice
-  I Love Practice
-  Sample Input 1
-  
-  2
-  Sample Output 1
-  
-  I Love Practice
-  I Love Practice
-</pre>
-
-                  </p>
-                </div>
-                <div class="col-lg-7 col-sm-12">
-                  <h6>Solution: </h6>
-                  <code>
-                    <pre class="text-dark">
-  #include< stdio.h>
-
-  int main()
-  {
-      int n;
-      scanf("%d", &n);
-      for (int i = 0; i <n; i++)
-      {
-          printf("I Love Practice\n");
-      }
-  
-      return 0;
-  }
-                    </pre>
-                  </code>
-                </div>
-              </div>
-              <hr>
-              <div class="row my-4">
-                <div class="col-lg-5 col-sm-12">
-                  <h6>Problem: 4</h6>
-                  <p>
-<pre>
-  Problem Statement
-
-  You've learned about variables, right?
-  Now its time to practice them. You
-  need to take an integer A, a very big
-  integer B, a floating value C and a 
-  character D as input and output them serially.
-  
-  Input Format
-  
-  First line will contain A
-  Second line will contain B
-  Third line will contain C
-  Fourth line will contain D
-  Constraints
-  
-  -10^9 <= A <= 10^9
-  -10^18 <= B <= 10^18
-  -10^9 <= C <= 10^9
-  Output Format
-  
-  Output them serially and put a new line after
-   each value. Output the floating value 2 points after decimal.
-  Sample Input 0
-  
-  100
-  1234567891234567
-  23.5675
-  A
-  Sample Output 0
-  
-  100
-  1234567891234567
-  23.57
-  A
-</pre>
-
-                  </p>
-                </div>
-                <div class="col-lg-7 col-sm-12">
-                  <h6>Solution: </h6>
-                  <code>
-                    <pre class="text-dark">
-  #include< stdio.h>
-
-  int main()
-  {
-      int n;
-      long long b;
-      float c;
-      char d;
-      scanf("%d %lld %f %c", &n, &b, &c, &d);
-      
-      printf("%d\n", n);
-      printf("%lld\n", b);
-      printf("%.2f\n", c);
-      printf("%c\n", d);
-      
-  
-      return 0;
-  }
-                    </pre>
-                  </code>
-                </div>
-              </div>
-              <hr>
-              <div class="row my-4">
-                <div class="col-lg-5 col-sm-12">
-                  <h6>Problem: 5</h6>
-                  <p>
-<pre>
-  Problem Statement
-
-  You will be given a positive integer N, you
-  need to print from 1 to N and besides the
-  value, print Yes or No. Print Yes if the
-  value is divisible by 5 and print No otherwise.
-  
-  Input Format
-  
-  Input will contain a positive integer N.
-  Constraints
-  
-  1 <= N <= 1000
-  Output Format
-  
-  Output as mentioned in the question. See
-  the sample input output for more clarifications.
-   Put a new line after every line.
-  Sample Input 0
-  
-  10
-  Sample Output 0
-  
-  1 No
-  2 No
-  3 No
-  4 No
-  5 Yes
-  6 No
-  7 No
-  8 No
-  9 No
-  10 Yes
-
-
-  Sample Input 1
-  5
-
-  Sample Output 1
-  1 No
-  2 No
-  3 No
-  4 No
-  5 Yes
-</pre>
-
-                  </p>
-                </div>
-                <div class="col-lg-7 col-sm-12">
-                  <h6>Solution: </h6>
-                  <code>
-                    <pre class="text-dark">
-  #include< stdio.h>
-
-  int main()
-  {
-      int n;
-      scanf("%d", &n);
-      for (int i = 1; i <= n; i++)
-      {
-          if(i%5==0)
+          #include < bits/stdc++.h>
+          using namespace std;
+          
+          class myQueue
           {
-              printf("%d Yes\n", i);
-          }
-          else
+          public:
+            list<int> l;
+          
+            void push(int val)
+            {
+              l.push_back(val);
+            }
+          
+            void pop()
+            {
+              l.pop_front();
+            }
+          
+            int front()
+            {
+              return l.front();
+            }
+          
+            int size()
+            {
+              return l.size();
+            }
+          
+            bool empty()
+            {
+              return l.empty();
+            }
+          };
+          
+          int main()
           {
-              printf("%d No\n",i);
+            myQueue q;
+            int n;
+            cin >> n;
+          
+            while (n--)
+            {
+              int x;
+              cin >> x;
+              q.push(x);
+            }
+          
+            while (!q.empty())
+            {
+              cout << q.front() << " ";
+              q.pop();
+            }
+          
+            if (!q.empty())
+            {
+              cout << q.front();
+            }
+          
+            return 0;
           }
-      }
-      
-  
-      return 0;
-  }
                     </pre>
                   </code>
                 </div>
               </div>
-              <h3>Github link <a href="https://github.com/MostafizurSawon/Introduction-to-Programming-Language-Problem-Solving-Part-I/tree/main/1-week/3-5-practice-day-2 target="_blank">here</a></h3>
+              <hr>
+              <div class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h6>Topic 3 : Queue using List</h6>
+                  <p>
+
+
+                  </p>
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Code: </h6>
+                  <code>
+                    <pre class="text-dark">
+                      #include < bits/stdc++.h>
+                      using namespace std;
+                      
+                      class myQueue
+                      {
+                      public:
+                        list<int> l;
+                      
+                        void push(int val)
+                        {
+                          l.push_back(val);
+                        }
+                      
+                        void pop()
+                        {
+                          l.pop_front();
+                        }
+                      
+                        int front()
+                        {
+                          return l.front();
+                        }
+                      
+                        int size()
+                        {
+                          return l.size();
+                        }
+                      
+                        bool empty()
+                        {
+                          return l.empty();
+                        }
+                      };
+                      
+                      int main()
+                      {
+                        myQueue q;
+                        int n;
+                        cin >> n;
+                      
+                        while (n--)
+                        {
+                          int x;
+                          cin >> x;
+                          q.push(x);
+                        }
+                      
+                        while (!q.empty())
+                        {
+                          cout << q.front() << " ";
+                          q.pop();
+                        }
+                      
+                        if (!q.empty())
+                        {
+                          cout << q.front();
+                        }
+                      
+                        return 0;
+                      }
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <hr>
+              <div class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h6>Topic 4: Queue using STL</h6>
+                  <p>
+
+                  </p>
+
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Code: </h6>
+                  <code>
+                    <pre class="text-dark">
+                    #include < bits/stdc++.h>
+                    using namespace std;
+                    
+                    int main()
+                    {
+                      queue<int> q;
+                      int n;
+                      cin >> n;
+                    
+                      while (n--)
+                      {
+                        int x;
+                        cin >> x;
+                        q.push(x);
+                      }
+                    
+                      cout << q.size() << endl;
+                      while (!q.empty())
+                      {
+                        cout << q.front() << " ";
+                        q.pop();
+                      }
+                    
+                      return 0;
+                    }
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <hr>
+              <div class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h6>Topic 5: Queue using Stack - Leetcode</h6>
+                  <p>
+                    leetcode link <a href="https://leetcode.com/problems/implement-queue-using-stacks/">here</a>
+
+                  </p>
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Code: </h6>
+                  <code>
+                    <pre class="text-dark">
+          class MyQueue
+          {
+          public:
+            stack<int> st;
+            MyQueue()
+            {
+            }
+          
+            void push(int x)
+            {
+              st.push(x);
+            }
+          
+            int pop()
+            {
+              stack<int> newSt;
+              int last;
+              while (!st.empty())
+              {
+                int k = st.top();
+                st.pop();
+                if (st.empty())
+                {
+                  // last element
+                  last = k;
+                  break;
+                }
+                newSt.push(k);
+              }
+          
+              while (!newSt.empty())
+              {
+                st.push(newSt.top());
+                newSt.pop();
+              }
+          
+              return last;
+            }
+          
+            int peek()
+            {
+              stack<int> newSt;
+              int last;
+          
+              while (!st.empty())
+              {
+                int k = st.top();
+                st.pop();
+                if (st.empty())
+                {
+                  // last element
+                  last = k;
+                }
+                newSt.push(k);
+              }
+          
+              while (!newSt.empty())
+              {
+                st.push(newSt.top());
+                newSt.pop();
+              }
+          
+              return last;
+            }
+          
+            bool empty()
+            {
+              return st.empty();
+            }
+          };
+          
+          /**
+            * Your MyQueue object will be instantiated and called as such:
+            * MyQueue* obj = new MyQueue();
+            * obj->push(x);
+            * int param_2 = obj->pop();
+            * int param_3 = obj->peek();
+            * bool param_4 = obj->empty();
+            */
+                      
+                      
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <hr>
+              <div class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h6>Topic 6: Stack using Queue - Leetcode</h6>
+                  <p>
+
+                    Leetcode link <a href="https://leetcode.com/problems/implement-stack-using-queues/">here</a>
+                  </p>
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Solution: </h6>
+                  <code>
+                    <pre class="text-dark">
+              class MyStack
+              {
+              public:
+                queue<int> q;
+                MyStack()
+                {
+                }
+              
+                void push(int x)
+                {
+                  q.push(x);
+                }
+              
+                int pop()
+                {
+                  queue<int> newQ;
+                  int last;
+              
+                  while (!q.empty())
+                  {
+                    int k = q.front();
+                    q.pop();
+                    if (q.empty())
+                    {
+                      // last element
+                      last = k;
+                      break;
+                    }
+                    newQ.push(k);
+                  }
+              
+                  q = newQ;
+              
+                  return last;
+                }
+              
+                int top()
+                {
+                  queue<int> newQ;
+                  int last;
+                  while (!q.empty())
+                  {
+                    int k = q.front();
+                    q.pop();
+                    if (q.empty())
+                    {
+                      // last element
+                      last = k;
+                    }
+                    newQ.push(k);
+                  }
+                  q = newQ;
+              
+                  return last;
+                }
+              
+                bool empty()
+                {
+                  return q.empty();
+                }
+              };
+              
+              /**
+                * Your MyStack object will be instantiated and called as such:
+                * MyStack* obj = new MyStack();
+                * obj->push(x);
+                * int param_2 = obj->pop();
+                * int param_3 = obj->top();
+                * bool param_4 = obj->empty();
+                */
+              
+                      
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <h3>Github link <a href="https://github.com/MostafizurSawon/basic-data-structure/tree/main/4-stack-and-queue/14-queue-implementation-and-STL" target="_blank">here</a></h3>
             </div>
 
 
-            <!-- 2 more c practice ends here -->
+            <!-- 2. Queue implementation and STL ends here -->
 
 
 
