@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intro to programming with C</title>
+    <title>Basic Data Structure with C++</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,7 +14,7 @@
       src="https://kit.fontawesome.com/468248347f.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../c/style.css" />
     <link rel="shortcut icon" href="c-circle.svg" type="image/x-icon" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
@@ -43,9 +43,9 @@
               <!-- <li class="nav-item">
                 <a class="nav-link text-danger active" aria-current="page" href="#">Home</a>
               </li> -->
-              <li class="nav-item dropdown text-success">
+              <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle"
+                  class="nav-link dropdown-toggle text-success"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -55,11 +55,8 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item active" href="#"
-                      >Introduction to programming with C<span
-                        class="badge bg-success ms-2"
-                        >New</span
-                      ></a
+                    <a class="dropdown-item" href="../c/1-start-with-c.html"
+                      >Introduction to programming with C</a
                     >
                   </li>
                   <li>
@@ -68,10 +65,9 @@
                     >
                   </li>
                   <li>
-                    <a
-                      class="dropdown-item"
-                      href="../basic-data-structure/index.html"
-                      >Basic Data Structure</a
+                    <a class="dropdown-item active" href="#"
+                      >Basic Data Structure
+                      <span class="badge bg-success ms-2">New</span></a
                     >
                   </li>
                 </ul>
@@ -139,12 +135,12 @@
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">
-              Semester 1: Introduction to programming with C
+              Semester 1: Basic Data Structure with C++
             </li>
           </ol>
         </nav>
 
-        <h1 class="text-center">Learn C by weeks</h1>
+        <h1 class="text-center">Basic Data Structure with C++</h1>
       </div>
       <hr />
       <section class="container-fluid">
@@ -158,7 +154,7 @@
                   <div class="fw-bold">
                     <a href="weeks/1-week.html">Week 1</a>
                   </div>
-                  Intro to programming
+                  Introduction
                 </div>
                 <span class="badge bg-primary rounded-pill">3</span>
               </li>
@@ -169,7 +165,7 @@
                   <div class="fw-bold">
                     <a href="weeks/2-week.html">Week 2</a>
                   </div>
-                  Loop and array
+                  Singly Linked list
                 </div>
                 <span class="badge bg-primary rounded-pill">4</span>
               </li>
@@ -180,42 +176,56 @@
                   <div class="fw-bold">
                     <a href="weeks/3-week.html">Week 3</a>
                   </div>
-                  Array & string operation
+                  Doubly Linked List
+                </div>
+                <span class="badge bg-primary rounded-pill">14</span>
+              </li>
+              <li
+                class="list-group-item d-flex justify-content-between align-items-start list-h"
+              >
+                <div class="ms-2 me-auto">
+                  <div class="fw-bold">
+                    <a href="weeks/4-week.html">Week 4</a>
+                  </div>
+                  Stack & Queue
                 </div>
                 <span class="badge bg-primary rounded-pill">14</span>
               </li>
             </ol>
           </div>
           <article class="col-lg-9 col-sm-8">
-            <p>
-              C is a general-purpose high level language that was originally
-              developed by Dennis Ritchie for the Unix operating system. It was
-              first implemented on the Digital Eqquipment Corporation PDP-11
-              computer in 1972. The Unix operating system and virtually all Unix
-              applications are written in the C language.
+            <div class="alert alert-danger" role="alert">
+              What is Data Structure?
+            </div>
+            <div class="bg-light p-5 rounded-2">
+              A data structure is a storage that is used to store and organize
+              data. It is a way of arranging data on a computer so that it can
+              be accessed and updated efficiently.
+            </div>
+            <div class="bg-light my-4 p-2 rounded-2">
+              A data structure is not only used for organizing the data. It is
+              also used for processing, retrieving, and storing data. There are
+              different basic and advanced types of data structures that are
+              used in almost every program or software system that has been
+              developed. So we must have good knowledge of data structures.
               <br />
-              C programming is a general-purpose, procedural computer
-              programming language originally developed at AT&T Bell Labs by
-              Dennis Ritchie in the early 1970s. A successor of the B
-              programming language, it was developed to overcome the challenges
-              of BASIC, B, and BPCL programming languages. It had both
-              high-level functionality and detailed features required to program
-              an operating system. During the 1980s, C programming gained
-              popularity for creating mainframes, microcomputers, and
-              minicomputers and has become one of the most widely used
-              programming languages.
-              <br />
-              Despite the emergence of numerous new languages like Java, Python,
-              JavaScript, and PHP, the popularity of C is not hampered. In fact,
-              these languages have borrowed many of their control structures and
-              other basic features from C.
-              <br />
-              What makes the C language so popular? Why are companies keen on
-              hiring C professionals even today? The most basic and
-              straightforward answer would be its features make it a unique and
-              special language, thereby still holding its relevance and
-              popularity.
-            </p>
+              Data structures are an integral part of computers used for the
+              arrangement of data in memory. They are essential and responsible
+              for organizing, processing, accessing, and storing data
+              efficiently. But this is not all. Various types of data structures
+              have their own characteristics, features, applications,
+              advantages, and disadvantages. So how do you identify a data
+              structure that is suitable for a particular task? What is meant by
+              the term ‘Data Structure’? How many types of data structures are
+              there and what are they used for?
+              <hr />
+              We have got you covered. We have made a complete list of
+              everything about what data structure is, what are the types of
+              data structures, the classification of data structures, the
+              applications of each data structure, and so on. In this article,
+              we will discuss every aspect of each data structure to help you
+              choose the best one in just minutes.
+            </div>
           </article>
         </div>
       </section>

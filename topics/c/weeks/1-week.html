@@ -12,28 +12,73 @@
     />
     <script src="https://kit.fontawesome.com/468248347f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../style.css">
-    <link rel="shortcut icon" href="../../../fav.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../c-circle.svg" type="image/x-icon">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="../../../index.html">Cs Fundamentals</a>
+          <a class="navbar-brand" href="../../../index.html" title="">Cs Fundamentals</a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <!-- <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
+                <a class="nav-link text-danger active" aria-current="page" href="#">Home</a>
               </li> -->
-              <li class="nav-item">
-                <a class="nav-link text-danger active" href="#">C Programming<span class="badge bg-secondary">New</span></a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-success" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Semester 1
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../1-start-with-c.html">Introduction to programming with C</a></li>
+                  <li><a class="dropdown-item" href="#">Introduction to C++ for DSA</a></li>
+                  <li><a class="dropdown-item" href="../../basic-data-structure/index.html">Basic Data Structure</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Semester 2
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Coming soon..</a></li>
+                  <li><a class="dropdown-item" href="#">Coming soon...</a></li>
+                  <li><a class="dropdown-item" href="#">Coming soon....</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Semester 3
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Coming soon..</a></li>
+                  <li><a class="dropdown-item" href="#">Coming soon...</a></li>
+                  <li><a class="dropdown-item" href="#">Coming soon....</a></li>
+                </ul>
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
             </form>
           </div>
         </div>
@@ -54,7 +99,7 @@
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">
-              Introduction to programming with C
+              Semester 1: Introduction to programming with C
             </li>
           </ol>
         </nav>
@@ -62,7 +107,7 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
-            <li class="breadcrumb-item"><a href="../../c/1-start-with-c.html">Introduction to programming with C</a></li>
+            <li class="breadcrumb-item"><a href="../../c/1-start-with-c.html">Semester 1: Introduction to programming with C</a></li>
             <li class="breadcrumb-item active" aria-current="page">Week 1
             </li>
           </ol>
@@ -378,7 +423,7 @@ See the sample input and output for more clarification.
                   </code>
                 </div>
               </div>
-              <hr>
+              <hr />
               <div class="row my-4">
                 <div class="col-lg-5 col-sm-12">
                   <h6>Problem: 2</h6>
