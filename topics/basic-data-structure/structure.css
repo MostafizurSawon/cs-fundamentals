@@ -1,0 +1,12 @@
+.icon-top {
+  position: relative;
+}
+
+.bottom {
+  position: sticky;
+  /* position: relative; */
+  top: 85%;
+  /* left: 80%; */
+  text-align: end;
+  z-index: 1;
+}
