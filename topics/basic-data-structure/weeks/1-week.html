@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 1: Introduction || Basic Data Structure with C++</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script src="https://kit.fontawesome.com/468248347f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../c/style.css">
+    <link rel="shortcut icon" href="../../../fav.svg" type="image/x-icon">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+    <link rel="stylesheet" href="../structure.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="../../../index.html" title="">Cs Fundamentals</a>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!-- <li class="nav-item">
+                <a class="nav-link text-danger active" aria-current="page" href="#">Home</a>
+              </li> -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-success" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Semester 1
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../../c/1-start-with-c.html">Introduction to programming with C</a></li>
+                  <li><a class="dropdown-item" href="#">Introduction to C++ for DSA</a></li>
+                  <li><a class="dropdown-item active" href="../index.html">3. Basic Data Structure</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Semester 2
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Coming soon..</a></li>
+                  <li><a class="dropdown-item" href="#">Coming soon...</a></li>
+                  <li><a class="dropdown-item" href="#">Coming soon....</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Semester 3
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Coming soon..</a></li>
+                  <li><a class="dropdown-item" href="#">Coming soon...</a></li>
+                  <li><a class="dropdown-item" href="#">Coming soon....</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main body here -->
+    <main class="container-fluid main-bg-2 icon-top">
+      
+      <div class="bottom">
+          <a class="" href="#">
+            
+            <button class="btn btn-outline-danger px-4 py-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+              </svg></button>
+          
+          </a>
+      </div>
+
+      <section class="intro">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Home</li>
+          </ol>
+        </nav>
+
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
+            <li class="breadcrumb-item" aria-current="page">
+              <a href="../../../../index.html#item-1">Semester 1</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">3. Basic Data Structure with C++
+            </li>
+          </ol>
+        </nav>
+
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../../../index.html">Home</a></li>
+            <li class="breadcrumb-item" aria-current="page">
+              <a href="../../../../index.html#item-1">Semester 1</a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+              <a href="../index.html">3. Basic Data Structure with C++</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Week 1: Introduction to Data Structure
+            </li>
+          </ol>
+        </nav>
+      </section>
+
+      <!-- <h2 class="text-center mt-5 py-3">Week 4: Stack & Queue</h2> -->
+      <div class="alert alert-success text-center mt-3 p-4 h1" role="alert">
+        Week 1: Introduction to Data Structure
+      </div>
+      <hr>
+
+      <section class="container-fluid">
+        <div class="d-flex align-items-start row rel">
+          <div class="nav flex-column nav-pills col-lg-3 col-sm-12 side" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-1" type="button" role="tab" aria-controls="v-pills-1" aria-selected="true">1. Time complexity, Dynamic array</button>
+            <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-2" type="button" role="tab" aria-controls="v-pills-2" aria-selected="false">
+              2. Operations on binary tree
+            </button>
+            <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-assignment" type="button" role="tab" aria-controls="v-pills-3"aria-selected="false">3. Practice day: 1</button>
+            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-4"type="button" role="tab" aria-controls="v-pills-4"aria-selected="false">4. Problem solving with STACK & QUEUE</button>
+            <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-5"type="button" role="tab" aria-controls="v-pills-5"aria-selected="false">5. Assignment</button>
+            <!-- <div class="mt-5 h4 text-center">
+
+              <a href="#">
+                
+                <button class="btn btn-outline-danger px-4 py-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                  </svg></button>
+              </a>
+            </div> -->
+          
+          </div>
+
+
+          <div class="tab-content col-lg-9 col-sm-12" id="v-pills-tabContent">
+
+            <!-- 1. Time complexity, Dynamic array starts here -->
+            <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+              <section class="topics col-lg-12 col-sm-12 mb-2">
+                <div class="alert alert-light mt-3 p-4 h3" role="alert">
+                  1. Time complexity, Dynamic array
+                </div>
+                <p>
+                  Time complexity is defined as the amount of time taken by an algorithm to run, as a function of the length of the input. It measures the time taken to execute each statement of code in an algorithm.
+                <img src="https://miro.medium.com/v2/resize:fit:1400/1*xq73u1N7ZsTE2MJ9jsj0CA.png" alt="" class="w-50 rounded my-3">
+                <h2>Today's topics:</h2>
+                <ol>
+                  <li><a href="#5-1-1">Time complexity O(n)</a></li>
+                  <li><a href="#5-1-2">Time complexity log(n)</a></li>
+                  <li><a href="#5-1-3">Time complexity sqrt(n)</a></li>
+                  <li><a href="#5-1-4">Time complexity (n*n)</a></li>
+                  <li><a href="#5-1-5">Time complexity nlog(n)</a></li>
+                </ol>
+                
+              </section>
+              <hr>
+              <div id="5-1-1" class="row">
+                <div class="col-lg-5 col-sm-12">
+                  <h6>Topic 1: </h6>
+                  <h4>Time complexity O(n)</h4>
+                  <p>You get linear time complexity when the running time of an algorithm increases linearly with the size of the input. This means that when a function has an iteration that iterates over an input size of n, it is said to have a time complexity of order O(n).</p>
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Code: </h6>
+                  <code>
+                    <pre class="text-dark">
+                #include < bits/stdc++.h>
+                using namespace std;
+
+                int main()
+                {
+                    int n;
+                    cin>>n;
+                    int a[n];
+                    for(int i=0;i<n;i++) // O(N)
+                    {
+                        cin>>a[i];
+                    }
+                    int s=0;
+                    for(int i=0; i<n; i+=2) // O(N)
+                    {
+                        s+=a[i];
+                    }
+                    cout<<s<<endl;
+                    return 0;
+                }
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <hr>
+              <div id="5-1-2" class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h6>Topic: 2</h6>
+                  <p>
+                    Pre-order binary tree traversal
+                  </p>
+                  <p>Preorder traversal of binary tree is a traversal method, where the root node is visited first, then left subtree and then the right sub tree. Unlike array and linked lists, linear data structures, we have several ways of traversing binary trees due to their hierarchical nature.</p>
+                  <img src="photos/preorder-traversal.jpg" alt="" class="w-100 rounded">
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Code: </h6>
+                  <code>
+                    <pre class="text-dark">
+        #include < bits/stdc++.h>
+        using namespace std;
+        class Node
+        {
+        public:
+          int val;
+          Node *left;
+          Node *right;
+          Node(int val)
+          {
+            this->val = val;
+            this->left = NULL;
+            this->right = NULL;
+          }
+        };
+        void preorder(Node *root)
+        {
+          if (root == NULL)
+          {
+            return;
+          }
+          cout << root->val << " ";
+          preorder(root->left);
+          preorder(root->right);
+        }
+        int main()
+        {
+          Node *root = new Node(10);
+          Node *a = new Node(20);
+          Node *b = new Node(30);
+          Node *c = new Node(40);
+          Node *d = new Node(50);
+          Node *e = new Node(60);
+          Node *f = new Node(70);
+          Node *g = new Node(80);
+          Node *h = new Node(90);
+          Node *i = new Node(100);
+
+          // connection
+          root->left = a;
+          root->right = b;
+          a->left = c;
+          a->right = h;
+          c->right = e;
+          b->right = d;
+          d->left = f;
+          d->right = g;
+          h->right = i;
+
+          // call
+          preorder(root);
+
+          return 0;
+        }
+
+        /*
+        Pre-order = rot -> Left -> right
+        */
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <hr>
+              <div id="5-1-3" class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h6>Topic: 3</h6>
+                  <h5>
+                    Post-order binary tree traversal
+                  </h5>
+                  <p>
+                    Postorder traversal is defined as a type of tree traversal which follows the Left-Right-Root policy such that for each node: The left subtree is traversed first. Then the right subtree is traversed. Finally, the root node of the subtree is traversed.
+                  </p>
+                  <img src="photos/post-order.jpg" alt="" class="w-100 rounded">
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Code: </h6>
+                  <code>
+                    <pre class="text-dark">
+                  #include < bits/stdc++.h>
+                  using namespace std;
+                  class Node
+                  {
+                  public:
+                    int val;
+                    Node *left;
+                    Node *right;
+                    Node(int val)
+                    {
+                      this->val = val;
+                      this->left = NULL;
+                      this->right = NULL;
+                    }
+                  };
+                  void postorder(Node *root)
+                  {
+                    if (root == NULL)
+                    {
+                      return;
+                    }
+                    postorder(root->left);
+                    postorder(root->right);
+                    cout << root->val << " ";
+                  }
+                  int main()
+                  {
+                    Node *root = new Node(10);
+                    Node *a = new Node(20);
+                    Node *b = new Node(30);
+                    Node *c = new Node(40);
+                    Node *d = new Node(50);
+                    Node *e = new Node(60);
+                    Node *f = new Node(70);
+                    Node *g = new Node(80);
+                    Node *h = new Node(90);
+                    Node *i = new Node(100);
+                  
+                    // connection
+                    root->left = a;
+                    root->right = b;
+                    a->left = c;
+                    a->right = h;
+                    c->right = e;
+                    b->right = d;
+                    d->left = f;
+                    d->right = g;
+                    h->right = i;
+                  
+                    // call
+                    postorder(root);
+                  
+                    return 0;
+                  }
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <hr>
+              <div id="5-1-4" class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h6>Topic: 4</h6>
+                  <p>
+                    In-order binary tree traversal
+                  </p>
+                  <p>
+                    In an inorder traversal of a binary tree, we traverse one subtree of a node, then "visit" the node, and then traverse its other subtree. Usually, we traverse the node's left subtree first and then traverse the node's right subtree.
+                  </p>
+                  <img src="photos/inorder-traversal.jpg" alt="" class="w-100 rounded-2">
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Code: </h6>
+                  <code>
+                    <pre class="text-dark">
+          #include < bits/stdc++.h>
+          using namespace std;
+          class Node
+          {
+          public:
+            int val;
+            Node *left;
+            Node *right;
+            Node(int val)
+            {
+              this->val = val;
+              this->left = NULL;
+              this->right = NULL;
+            }
+          };
+          void inorder(Node *root)
+          {
+            if (root == NULL)
+            {
+              return;
+            }
+            inorder(root->left);
+            cout << root->val << " ";
+            inorder(root->right);
+          }
+          int main()
+          {
+            Node *root = new Node(10);
+            Node *a = new Node(20);
+            Node *b = new Node(30);
+            Node *c = new Node(40);
+            Node *d = new Node(50);
+            Node *e = new Node(60);
+            Node *f = new Node(70);
+            Node *g = new Node(80);
+            Node *h = new Node(90);
+            Node *i = new Node(100);
+          
+            // connection
+            root->left = a;
+            root->right = b;
+            a->left = c;
+            a->right = h;
+            c->right = e;
+            b->right = d;
+            d->left = f;
+            d->right = g;
+            h->right = i;
+          
+            // call
+            inorder(root);
+          
+            return 0;
+          }
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <hr>
+              <h3>Github link <a href="https://github.com/MostafizurSawon/basic-data-structure/tree/main/5-binary-tree/17-binary-tree-implementation" target="_blank">here</a></h3>
+
+            </div>
+
+            <!-- 1. Binary Tree Implementation ends here -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+            <!-- 2.
+               Operations
+                on
+                 binary
+                  tree starts -->
+
+            
+            <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+              <div class="alert alert-light mt-3 p-4 h3" role="alert">
+                2. Operations on binary tree
+              </div>
+              <h2>Today's topics:</h2>
+                  <ol>
+                    <li><a href="#2-1">Level Order Tree Print</a></li>
+                    <li><a href="#2-2">Input Binary Tree</a></li>
+                    <li><a href="#2-3">Count number of nodes</a></li>
+                    <li><a href="#2-4">Count Leaf Node</a></li>
+                    <li><a href="#2-5">Max Height</a></li>
+                    <!-- <li><a href="#2-6">Stack using Queue - Leetcode</a></li> -->
+                  </ol>
+              <hr>
+              <div id="2-1" class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h4>Topic 1: Level Order Tree Print</h4>
+                  <p>
+                    A Level Order Traversal is a traversal which always traverses based on the level of the tree. So, this traversal first traverses the nodes corresponding to Level 0, and then Level 1, and so on, from the root node. In the example Binary Tree above, the level order traversal will be: (Root)
+
+                   </p>
+                   <p>Create a tree in level order: <br>
+                    1. Whenever a new Node is added to the binary tree, the address of the node is pushed into a queue. <br>
+                    2. Node addresses will stay in the queue until both its children's Nodes do not get filled. <br>
+                    3. Once both the children's Nodes get filled up, the parent Node is popped from the queue.</p>
+                <!--  <img src="https://simplesnippets.tech/wp-content/uploads/2020/05/queue-using-singly-linked-list-featured-image.jpg" alt="" class="w-100 rounded"> -->
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Solution: </h6>
+                  <code>
+                    <pre class="text-dark">
+              #include < bits/stdc++.h>
+              using namespace std;
+              class Node
+              {
+              public:
+                  int val;
+                  Node *left;
+                  Node *right;
+                  Node(int val)
+                  {
+                      this->val = val;
+                      this->left = NULL;
+                      this->right = NULL;
+                  }
+              };
+              void level_order(Node *root)
+              {
+                  if (root == NULL)
+                  {
+                      cout << "Tree nai" << endl;
+                      return;
+                  }
+                  queue<Node *> q;
+                  q.push(root);
+                  while (!q.empty())
+                  {
+                      // 1. ber kore ana
+                      Node *f = q.front();
+                      q.pop();
+              
+                      // 2. jabotiyo ja kaj ache
+                      cout << f->val << " ";
+              
+                      // 3. tar children gulo ke rakha
+                      if (f->left)
+                          q.push(f->left);
+                      if (f->right)
+                          q.push(f->right);
+                  }
+              }
+              int main()
+              {
+                  Node *root = new Node(10);
+                  Node *a = new Node(20);
+                  Node *b = new Node(30);
+                  Node *c = new Node(40);
+                  Node *d = new Node(50);
+                  Node *e = new Node(60);
+                  Node *f = new Node(70);
+                  Node *g = new Node(80);
+                  Node *h = new Node(90);
+                  Node *i = new Node(100);
+              
+                  // connection
+                  root->left = a;
+                  root->right = b;
+                  a->left = c;
+                  a->right = h;
+                  c->right = e;
+                  b->right = d;
+                  d->left = f;
+                  d->right = g;
+                  h->right = i;
+              
+                  level_order(root);
+                  return 0;
+              }                    
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <hr />
+              <div id="2-2" class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h6>Topic 2: Input Binary Tree</h6>
+                  <!-- <p>
+                    Using a doubly linked list for implementing a queue provides several advantages. It allows for efficient insertion and removal of elements at both ends of the list, making enqueue and dequeue operations constant time.
+                  </p> -->
+                  <!-- <img src="https://agostini.tech/wp-content/uploads/2018/08/LinkedListQueue-DublyLinkedList.png" alt="" class="w-100 rounded-2"> -->
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Code: </h6>
+                  <code>
+                    <pre class="text-dark">
+                #include < bits/stdc++.h>
+                using namespace std;
+                
+                class Node
+                {
+                public:
+                  int val;
+                  Node *left;
+                  Node *right;
+                  Node(int val)
+                  {
+                    this->val = val;
+                    this->left = NULL;
+                    this->right = NULL;
+                  }
+                };
+                
+                Node *input_tree()
+                {
+                  int val;
+                  cin >> val;
+                  Node *root;
+                  if (val == -1)
+                    root = NULL;
+                  else
+                    root = new Node(val);
+                  queue<Node *> q;
+                  if (root)
+                    q.push(root);
+                  while (!q.empty())
+                  {
+                    // 1. Remove
+                    Node *p = q.front();
+                    q.pop();
+                
+                    // 2. All work
+                    int l, r;
+                    cin >> l >> r;
+                    Node *myLeft;
+                    Node *myRight;
+                    if (l == -1)
+                      myLeft = NULL;
+                    else
+                      myLeft = new Node(l);
+                    if (r == -1)
+                      myRight = NULL;
+                    else
+                      myRight = new Node(r);
+                
+                    p->left = myLeft;
+                    p->right = myRight;
+                
+                    // 3. push children
+                    if (p->left)
+                      q.push(p->left);
+                    if (p->right)
+                      q.push(p->right);
+                  }
+                  return root;
+                }
+                
+                void level_order(Node *root)
+                {
+                  if (root == NULL)
+                  {
+                    cout << "Tree Not Found!" << endl;
+                    return;
+                  }
+                  queue<Node *> q;
+                  q.push(root);
+                  while (!q.empty())
+                  {
+                    // 1. Remove
+                    Node *f = q.front();
+                    q.pop();
+                
+                    // 2. All work
+                    cout << f->val << " ";
+                
+                    // 3. keep children
+                    if (f->left)
+                      q.push(f->left);
+                    if (f->right)
+                      q.push(f->right);
+                  }
+                }
+                
+                int main()
+                {
+                  Node *root = input_tree();
+                  level_order(root);
+                
+                  return 0;
+                }
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <hr>
+              <div id="2-3" class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h4>Topic 3 : Count number of nodes</h4>
+                  <p>
+
+
+                  </p>
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Code: </h6>
+                  <code>
+                    <pre class="text-dark">
+            #include < bits/stdc++.h>
+            using namespace std;
+            
+            class Node
+            {
+            public:
+              int val;
+              Node *left;
+              Node *right;
+              Node(int val)
+              {
+                this->val = val;
+                this->left = NULL;
+                this->right = NULL;
+              }
+            };
+            
+            Node *input_tree()
+            {
+              int val;
+              cin >> val;
+              Node *root;
+              if (val == -1)
+                root = NULL;
+              else
+                root = new Node(val);
+              queue<Node *> q;
+              if (root)
+                q.push(root);
+              while (!q.empty())
+              {
+                // 1. ber kore ano
+                Node *p = q.front();
+                q.pop();
+            
+                // 2. jabotiyo ja kaj ache
+                int l, r;
+                cin >> l >> r;
+                Node *myLeft;
+                Node *myRight;
+                if (l == -1)
+                  myLeft = NULL;
+                else
+                  myLeft = new Node(l);
+                if (r == -1)
+                  myRight = NULL;
+                else
+                  myRight = new Node(r);
+            
+                p->left = myLeft;
+                p->right = myRight;
+            
+                // 3. children gulo ke push koro
+                if (p->left)
+                  q.push(p->left);
+                if (p->right)
+                  q.push(p->right);
+              }
+              return root;
+            }
+            
+            int count(Node *root)
+            {
+              if (root == NULL)
+                return 0;
+              int l = count(root->left);
+              int r = count(root->right);
+              return l + r + 1;
+            }
+            
+            int main()
+            {
+              Node *root = input_tree();
+              cout << count(root) << endl;
+            
+              return 0;
+            }
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <hr>
+              <div id="2-4" class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h4>Topic 4: Count Leaf Node</h4>
+                  <p>
+
+                  </p>
+
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h6>Code: </h6>
+                  <code>
+                    <pre class="text-dark">
+              #include < bits/stdc++.h>
+              using namespace std;
+              
+              class Node
+              {
+              public:
+                int val;
+                Node *left;
+                Node *right;
+                Node(int val)
+                {
+                  this->val = val;
+                  this->left = NULL;
+                  this->right = NULL;
+                }
+              };
+              
+              Node *input_tree()
+              {
+                int val;
+                cin >> val;
+                Node *root;
+                if (val == -1)
+                  root = NULL;
+                else
+                  root = new Node(val);
+                queue<Node *> q;
+                if (root)
+                  q.push(root);
+                while (!q.empty())
+                {
+                  // 1. Pull
+                  Node *p = q.front();
+                  q.pop();
+              
+                  // 2. All work
+                  int l, r;
+                  cin >> l >> r;
+                  Node *myLeft;
+                  Node *myRight;
+                  if (l == -1)
+                    myLeft = NULL;
+                  else
+                    myLeft = new Node(l);
+                  if (r == -1)
+                    myRight = NULL;
+                  else
+                    myRight = new Node(r);
+              
+                  p->left = myLeft;
+                  p->right = myRight;
+              
+                  // 3. Push children
+                  if (p->left)
+                    q.push(p->left);
+                  if (p->right)
+                    q.push(p->right);
+                }
+                return root;
+              }
+              
+              int count_leaf(Node *root)
+              {
+                if (root == NULL)
+                  return 0;
+                if (root->left == NULL && root->right == NULL)
+                {
+                  return 1;
+                }
+                else
+                {
+                  int l = count_leaf(root->left);
+                  int r = count_leaf(root->right);
+                  return l + r;
+                }
+              }
+              
+              int main()
+              {
+                Node *root = input_tree();
+                cout << count_leaf(root) << endl;
+              
+                return 0;
+              }
+              
+// 10 20 50 30 40 70 60 -1 -1 -1 -1 -1 80 -1 -1 -1 -1
+// ANS= 4
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <hr>
+              <div id="2-5" class="row my-4">
+                <div class="col-lg-5 col-sm-12">
+                  <h4>Topic 5: Max Height</h4>
+                  <p>
+                  </p>
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                  <h4>Code: </h4>
+                  <code>
+                    <pre class="text-dark">
+            #include < bits/stdc++.h>
+            using namespace std;
+            class Node
+            {
+            public:
+              int val;
+              Node *left;
+              Node *right;
+              Node(int val)
+              {
+                this->val = val;
+                this->left = NULL;
+                this->right = NULL;
+              }
+            };
+            
+            Node *input_tree()
+            {
+              int val;
+              cin >> val;
+              Node *root;
+              if (val == -1)
+                root = NULL;
+              else
+                root = new Node(val);
+              queue<Node *> q;
+              if (root)
+                q.push(root);
+              while (!q.empty())
+              {
+                // 1. ber kore ano
+                Node *p = q.front();
+                q.pop();
+            
+                // 2. jabotiyo ja kaj ache
+                int l, r;
+                cin >> l >> r;
+                Node *myLeft;
+                Node *myRight;
+                if (l == -1)
+                  myLeft = NULL;
+                else
+                  myLeft = new Node(l);
+                if (r == -1)
+                  myRight = NULL;
+                else
+                  myRight = new Node(r);
+            
+                p->left = myLeft;
+                p->right = myRight;
+            
+                // 3. children gulo ke push koro
+                if (p->left)
+                  q.push(p->left);
+                if (p->right)
+                  q.push(p->right);
+              }
+              return root;
+            }
+            
+            int maxHeight(Node *root)
+            {
+              if (root == NULL)
+                return 0;
+              int l = maxHeight(root->left);
+              int r = maxHeight(root->right);
+              return max(l, r) + 1;
+            }
+            
+            int main()
+            {
+              Node *root = input_tree();
+              cout << maxHeight(root) << endl;
+            
+              return 0;
+            }
+            
+// 10 20 30 70 150 120 40 80 90 -1 -1 130 -1 60
+ 50 -1 -1 100 -1 -1 140 -1 -1 -1 -1 -1 1 -1 -1 -1 -1 -1
+                    </pre>
+                  </code>
+                </div>
+              </div>
+              <h3>Github link <a href="https://github.com/MostafizurSawon/basic-data-structure/tree/main/5-binary-tree/18-operations-on-binary-tree" target="_blank">here</a></h3>
+            </div>
+
+
+            <!-- 2. Operations
+                on
+                 binary
+                  tree ends here -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- 3. Practice
+                day 1
+                  starts -->
+
+
+
+            <div class="tab-pane fade" id="v-pills-assignment" role="tabpanel" aria-labelledby="v-pills-assignment-tab" tabindex="0">
+              
+              
+              <h3>Github link <a href="https://github.com/MostafizurSawon/basic-data-structure/tree/main/5-binary-tree/18-5-practice-day-1" target="_blank">here</a></h3>
+            </div>
+
+            
+            <div class="tab-pane fade" id="v-pills-5"role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex temporibus velit illum. Aspernatur amet dolorum consectetur hic ipsam ea soluta?</div> 
+
+            
+          </div>
+        </div>
+      </section>
+
+        
+
+
+      <!-- bootstrap js script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
